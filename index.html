@@ -4,10 +4,14 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Moda Thick Client Presentation</title>
+
+    <meta name="description" content="A presentation on Thick Client architecture and Angular for the Web App Dev team">
+    <meta name="author" content="Josh Schneider">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<!--<link rel="stylesheet" href="css/theme/black.css">-->
+		<link rel="stylesheet" href="css/theme/mktfed.css" id="theme">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,8 +28,20 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-markdown="md/slide1.md"
+					data-separator="^\n\n\n"  
+         	data-separator-vertical="^\n\n"  
+         	data-separator-notes="^Note:"  
+         	data-charset="iso-8859-15">
+					Slide 1
+				</section>
+				<section data-markdown="md/slide2.md"
+					data-separator="^\n\n\n"  
+         	data-separator-vertical="^\n\n"  
+         	data-separator-notes="^Note:"  
+         	data-charset="iso-8859-15">
+					Slide 
+				</section>
 			</div>
 		</div>
 
@@ -35,7 +51,18 @@
 		<script>
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
+				controls: true,
+				progress: true,
 				history: true,
+				center: true,
+				overview: true,
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				
+				//Parallax scrolling
+				parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				//parallaxBackgroundSize: '2100px 900px',
+				parallaxBackgroundSize: '2850px 1218px',
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
