@@ -28,26 +28,24 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-markdown="md/slide1.md"
-					data-separator="^\n\n\n"  
-         	data-separator-vertical="^\n\n"  
-         	data-separator-notes="^Note:"  
-         	data-charset="iso-8859-15">
+				<section data-markdown="md/slide1.md">
 					Slide 1
 				</section>
-				<section data-markdown="md/slide2.md"
-					data-separator="^\n\n\n"  
-         	data-separator-vertical="^\n\n"  
-         	data-separator-notes="^Note:"  
-         	data-charset="iso-8859-15">
-					Slide 
+				<section>
+					<section data-markdown="md/slide2.md">
+					</section>
+					<section data-markdown="md/slide2a.md">
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+                          ## Woo
+                          - Something <!-- .element: class="fragment" data-fragment-index="1" -->
+                          - Something else <!-- .element: class="fragment" data-fragment-index="2" -->
+						</script>
+					</section>
 				</section>
-				<section data-markdown="md/slide3.md"
-						 data-separator="^\n\n\n"
-						 data-separator-vertical="^\n\n"
-						 data-separator-notes="^Note:"
-						 data-charset="iso-8859-15">
-					Slide
+				<section data-markdown="md/slide3.md">
+					Slide 3
 				</section>
 			</div>
 		</div>
@@ -80,5 +78,6 @@
 				]
 			});
 		</script>
+		<script src="//localhost:35729/livereload.js"></script>
 	</body>
 </html>

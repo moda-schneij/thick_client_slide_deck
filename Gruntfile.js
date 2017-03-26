@@ -119,21 +119,36 @@ module.exports = function(grunt) {
 		watch: {
 			js: {
 				files: [ 'Gruntfile.js', 'js/reveal.js' ],
-				tasks: 'js'
+				tasks: 'js-notest',
+        options: {
+          livereload: true
+        }
 			},
 			theme: {
 				files: [ 'css/theme/source/**/*.scss', 'css/theme/template/**/*.scss' ],
-				tasks: 'css-themes'
+				tasks: 'css-themes',
+        options: {
+          livereload: true
+        }
 			},
 			css: {
 				files: [ 'css/reveal.scss' ],
-				tasks: 'css-core'
+				tasks: 'css-core',
+        options: {
+          livereload: true
+        }
 			},
 			html: {
-				files: root.map(path => path + '**/*.html')
+				files: root.map(path => path + '**/*.html'),
+				options: {
+					livereload: true
+				}
 			},
 			markdown: {
-				files: root.map(path => path + '**/*.md')
+				files: root.map(path => path + '**/*.md'),
+				options: {
+					livereload: true
+				}
 			},
 			options: {
 				livereload: true
@@ -165,6 +180,9 @@ module.exports = function(grunt) {
 
 	// JS task
 	grunt.registerTask( 'js', [ 'jshint', 'uglify', 'qunit' ] );
+
+	//JS without tests task
+  grunt.registerTask( 'js-notest', [ 'jshint', 'uglify' ] );
 
 	// Theme CSS
 	grunt.registerTask( 'css-themes', [ 'sass:themes' ] );
