@@ -1,1 +1,1 @@
-# <span class="logo">Moda</span> Developing thick client web applications
+<h1 class="with-logo"><span class="logo">Moda</span>Thick-client web apps with Angular</h1>
