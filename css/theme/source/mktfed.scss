@@ -149,6 +149,15 @@ $strongColor: #ffe92c;
 		font-weight: normal;
 		color: $strongColor;
 	}
+
+	.reveal section img {
+		background: none;
+		border: 0;
+		&.inline-with-content {
+			margin: 0;
+		}
+	}
+
 	.reveal .logo {
 	    background-image: url("../../../images/moda.png");
 	    background-color: rgba(225, 225, 225, .5);

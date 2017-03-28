@@ -98,7 +98,9 @@ module.exports = function(grunt) {
 					port: port,
 					base: root,
 					livereload: true,
-					open: true
+					open: {
+						appName: "chrome"
+					}
 				}
 			},
 
@@ -139,13 +141,15 @@ module.exports = function(grunt) {
         }
 			},
 			html: {
-				files: root.map(path => path + '**/*.html'),
+				//files: [root.map(path => path + '**/*.html')],
+				files: [ '**/*.html' ],
 				options: {
 					livereload: true
 				}
 			},
 			markdown: {
-				files: root.map(path => path + '**/*.md'),
+				//files: root.map(path => path + '**/*.md'),
+				files: [ '**/*.md' ],
 				options: {
 					livereload: true
 				}

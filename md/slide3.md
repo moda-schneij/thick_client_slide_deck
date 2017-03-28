@@ -1,1 +1,1 @@
-# Node, NPM, ecosystem & pipeline
+## Thick client ecosystem & pipeline

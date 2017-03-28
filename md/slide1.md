@@ -1,1 +1,1 @@
-<h1 class="with-logo"><span class="logo">Moda</span>Thick-client web apps with Angular</h1>
+<h1 class="with-logo"><span class="logo">Moda</span>Thick-client web apps with Angular <img class="inline-with-content" src="images/cropped-angular-sm.png" width="193" height="206" /></h1>

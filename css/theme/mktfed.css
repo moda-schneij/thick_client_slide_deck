@@ -336,6 +336,12 @@ body {
   font-weight: normal;
   color: #ffe92c; }
 
+.reveal section img {
+  background: none;
+  border: 0; }
+  .reveal section img.inline-with-content {
+    margin: 0; }
+
 .reveal .logo {
   background-image: url("../../../images/moda.png");
   background-color: rgba(225, 225, 225, 0.5);
