@@ -1,4 +1,4 @@
-## ES6 (aka ES 2015)
+## ES6 (aka ES 2015) ![alt text](images/es6.png "ES6 Logo") <!-- .element: class="inline-with-content" -->
 - Next-generation JavaScript <!-- .element: class="fragment" data-fragment-index="1" -->
 - Provides the first native JS module system <!-- .element: class="fragment" data-fragment-index="2" -->
   - Supported by module bundlers along with Node's CommonJS and other flavors of JS modules <!-- .element: class="fragment" data-fragment-index="3" -->

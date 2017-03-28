@@ -338,9 +338,11 @@ body {
 
 .reveal section img {
   background: none;
-  border: 0; }
+  border: 0;
+  box-shadow: none; }
   .reveal section img.inline-with-content {
-    margin: 0; }
+    margin: 0;
+    vertical-align: bottom; }
 
 .reveal .logo {
   background-image: url("../../../images/moda.png");
@@ -362,3 +364,14 @@ body {
 .reveal .with-logo {
   display: inline-block;
   vertical-align: middle; }
+
+.reveal img.icon-moda-home {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  display: inline-block;
+  left: 20px;
+  padding: 4px;
+  position: absolute;
+  top: 20px;
+  transform: rotate(0.5turn);
+  z-index: 1; }

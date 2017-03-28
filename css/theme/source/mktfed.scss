@@ -153,8 +153,10 @@ $strongColor: #ffe92c;
 	.reveal section img {
 		background: none;
 		border: 0;
+		box-shadow: none;
 		&.inline-with-content {
 			margin: 0;
+			vertical-align: bottom;
 		}
 	}
 
@@ -178,5 +180,17 @@ $strongColor: #ffe92c;
 	.reveal .with-logo {
 		display: inline-block;
 		vertical-align: middle;
+	}
+
+	.reveal img.icon-moda-home {
+		background-color: rgba(255,255,255,0.5);
+		border-radius: 4px;
+		display: inline-block;
+		left: 20px;
+		padding: 4px;
+		position: absolute;
+		top: 20px;
+		transform: rotate(0.5turn);
+		z-index: 1;
 	}
 //
