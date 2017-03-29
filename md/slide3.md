@@ -1,1 +1,0 @@
-## Thick client ecosystem & pipeline

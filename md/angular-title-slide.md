@@ -1,0 +1,1 @@
+<img src="images/adventures-in-angular.png">

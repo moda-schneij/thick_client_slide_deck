@@ -11,6 +11,9 @@
   font-weight: normal;
   font-style: normal; }
 
+.reveal p, .reveal li {
+  font-size: 0.9em; }
+
 @keyframes vertSlide {
   from {
     top: 0; }
@@ -365,13 +368,31 @@ body {
   display: inline-block;
   vertical-align: middle; }
 
-.reveal img.icon-moda-home {
+.reveal img.icon-moda-home, .reveal img.icon-moda-overview {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 4px;
   display: inline-block;
-  left: 20px;
   padding: 4px;
   position: absolute;
   top: 20px;
-  transform: rotate(0.5turn);
   z-index: 1; }
+
+.reveal img.icon-moda-home {
+  left: 20px;
+  transform: rotate(0.5turn); }
+
+.reveal img.icon-moda-overview {
+  left: 60px;
+  transform: rotate(-0.25turn); }
+
+.reveal img.angular-overview {
+  background: #fff;
+  padding: 20px; }
+
+.reveal pre.inline {
+  display: inline-block;
+  font-size: 0.8em;
+  opacity: 1;
+  padding: 0;
+  margin: 0;
+  width: auto; }

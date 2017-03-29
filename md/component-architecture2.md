@@ -1,0 +1,3 @@
+or, if you prefer crappy illustrations...
+
+![alt text](images/component_arch2.png "Component architecture bad drawing") <!-- .element: class="inline-with-content angular-overview fragment" data-fragment-index="1" -->
