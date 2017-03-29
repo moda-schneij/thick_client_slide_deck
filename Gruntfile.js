@@ -2,6 +2,15 @@
 module.exports = function(grunt) {
 	var port = grunt.option('port') || 8000;
 	var root = grunt.option('root') || '.';
+	var hostname = grunt.option('hostname') || 'localhost';
+	var connectBaseOpts = {
+    port: port,
+    base: root,
+    hostname: hostname,
+    open: {
+      appName: "chrome"
+    }
+  };
 
 	if (!Array.isArray(root)) root = [root];
 
@@ -93,17 +102,8 @@ module.exports = function(grunt) {
 		},
 
 		connect: {
-			server: {
-				options: {
-					port: port,
-					base: root,
-					livereload: true,
-					open: {
-						appName: "chrome"
-					}
-				}
-			},
-
+      server: {},
+      present: {}
 		},
 
 		zip: {
@@ -114,45 +114,30 @@ module.exports = function(grunt) {
 				'lib/**',
 				'images/**',
 				'plugin/**',
-				'**.md'
+				'**/*.md'
 			]
 		},
 
 		watch: {
 			js: {
 				files: [ 'Gruntfile.js', 'js/reveal.js' ],
-				tasks: 'js-notest',
-        options: {
-          livereload: true
-        }
+				tasks: 'js-notest'
 			},
 			theme: {
 				files: [ 'css/theme/source/**/*.scss', 'css/theme/template/**/*.scss' ],
-				tasks: 'css-themes',
-        options: {
-          livereload: true
-        }
+				tasks: 'css-themes'
 			},
 			css: {
 				files: [ 'css/reveal.scss' ],
-				tasks: 'css-core',
-        options: {
-          livereload: true
-        }
+				tasks: 'css-core'
 			},
 			html: {
 				//files: [root.map(path => path + '**/*.html')],
-				files: [ '**/*.html' ],
-				options: {
-					livereload: true
-				}
+				files: [ '**/*.html' ]
 			},
 			markdown: {
 				//files: root.map(path => path + '**/*.md'),
-				files: [ '**/*.md' ],
-				options: {
-					livereload: true
-				}
+				files: [ '**/*.md' ]
 			},
 			options: {
 				livereload: true
@@ -182,6 +167,9 @@ module.exports = function(grunt) {
 	// Default task
 	grunt.registerTask( 'default', [ 'css', 'js' ] );
 
+	// Default, no-test
+  grunt.registerTask( 'default-notest', [ 'css', 'js-notest' ] );
+
 	// JS task
 	grunt.registerTask( 'js', [ 'jshint', 'uglify', 'qunit' ] );
 
@@ -200,8 +188,27 @@ module.exports = function(grunt) {
 	// Package presentation to archive
 	grunt.registerTask( 'package', [ 'default', 'zip' ] );
 
-	// Serve presentation locally
-	grunt.registerTask( 'serve', [ 'connect', 'watch' ] );
+  // No-test package presentation to archive
+  grunt.registerTask( 'package-notest', [ 'default-notest', 'zip' ] );
+
+	// Serve presentation locally and watch - dev mode
+	grunt.registerTask( 'serve', 'Connect and watch with livereload for development', function() {
+    var opts = Object.create(connectBaseOpts);
+    opts.livereload = true;
+    grunt.config.set('connect.server.options', opts);
+    grunt.task.run(['connect:server', 'watch']);
+	  //[ 'connect:server', 'watch' ]
+  });
+
+  // Serve presentation locally
+  grunt.registerTask( 'present', 'Connect and keepalive for presentation', function() {
+    var opts = Object.create(connectBaseOpts);
+    opts.keepalive = true;
+    opts.livereload = false;
+    grunt.config.set('connect.present.options', opts);
+    grunt.task.run('connect:present');
+    //[ 'connect:present' ]
+  });
 
 	// Run tests
 	grunt.registerTask( 'test', [ 'jshint', 'qunit' ] );

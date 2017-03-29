@@ -396,3 +396,6 @@ body {
   padding: 0;
   margin: 0;
   width: auto; }
+
+.reveal.overview {
+  background-color: #323232; }
