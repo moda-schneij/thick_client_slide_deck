@@ -389,13 +389,15 @@ body {
   background: #fff;
   padding: 20px; }
 
-.reveal pre.inline {
-  display: inline-block;
-  font-size: 0.8em;
-  opacity: 1;
-  padding: 0;
-  margin: 0;
-  width: auto; }
+.reveal pre {
+  box-shadow: none; }
+  .reveal pre.inline {
+    display: inline-block;
+    font-size: 0.8em;
+    opacity: 1;
+    padding: 0;
+    margin: 0;
+    width: auto; }
 
 .reveal.overview {
   background-color: #323232; }

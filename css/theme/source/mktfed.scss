@@ -219,13 +219,20 @@ $strongColor: #ffe92c;
 		padding: 20px;
 	}
 
-	.reveal pre.inline {
-		display: inline-block;
-		font-size: 0.8em;
-		opacity: 1;
-		padding: 0;
-		margin: 0;
-		width: auto;
+	.reveal pre {
+		box-shadow: none;
+		&.inline {
+			display: inline-block;
+			font-size: 0.8em;
+			opacity: 1;
+			padding: 0;
+			margin: 0;
+			width: auto;
+		}
+	}
+
+	.reveal .align-left {
+		text-align: left;
 	}
 
 	.reveal.overview {
