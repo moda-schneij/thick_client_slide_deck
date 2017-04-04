@@ -164,9 +164,15 @@ $strongColor: #ffe92c;
 		background: none;
 		border: 0;
 		box-shadow: none;
-		&.inline-with-content {
+		&.inline-with-content,
+		&.inline-with-heading {
 			margin: 0;
+		}
+		&.inline-with-content {
 			vertical-align: bottom;
+		}
+		&.inline-with-heading {
+			vertical-align: middle;
 		}
 	}
 

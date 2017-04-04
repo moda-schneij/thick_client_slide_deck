@@ -343,9 +343,12 @@ body {
   background: none;
   border: 0;
   box-shadow: none; }
+  .reveal section img.inline-with-content, .reveal section img.inline-with-heading {
+    margin: 0; }
   .reveal section img.inline-with-content {
-    margin: 0;
     vertical-align: bottom; }
+  .reveal section img.inline-with-heading {
+    vertical-align: middle; }
 
 .reveal .logo {
   background-image: url("../../../images/moda.png");
@@ -398,6 +401,9 @@ body {
     padding: 0;
     margin: 0;
     width: auto; }
+
+.reveal .align-left {
+  text-align: left; }
 
 .reveal.overview {
   background-color: #323232; }
